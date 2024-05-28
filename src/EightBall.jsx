@@ -12,22 +12,37 @@ import { sample } from "lodash";
  * Props:
  * answers: [{msg, color},...]
  */
-function EightBall({ answers }){
+function EightBall({ answers }) {
   const [msg, setMsg] = useState("Think of a Question");
   const [color, setColor] = useState("black");
 
   const randomMsgColor = sample(answers);
+  console.log(answers);
 
-  function handleClick(evt){
-    setMsg(randomMsgColor.msg)
-    setColor(randomMsgColor.color)
+  function handleClick(evt) {
+    setMsg(randomMsgColor.msg);
+    setColor(randomMsgColor.color);
   }
 
-  return (
-    <button className="EightBall" onClick={handleClick}>
+  const stylesEightBall = {
+    backgroundColor: color,
+    height: "200px",
+  };
 
+  const stylesText = {
+    fontSize: "20px",
+    color: "white",
+  };
+
+  return (
+    <button
+      className="EightBall btn rounded-circle"
+      onClick={handleClick}
+      style={stylesEightBall}
+    >
+      <b style={stylesText}>{msg}</b>
     </button>
-  )
+  );
 }
 
 export default EightBall;

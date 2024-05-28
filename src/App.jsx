@@ -6,11 +6,11 @@ import { EIGHT_BALL_MSG_AND_COLORS } from "./constants.jsx";
 /** Main App component
  *
  * App -> Eightball
-*/
+ */
 function App() {
   return (
-    <div className="App">
-      <EightBall answers={ EIGHT_BALL_MSG_AND_COLORS} />
+    <div className="App container text-center">
+      <EightBall answers={EIGHT_BALL_MSG_AND_COLORS} />
     </div>
   );
 }
