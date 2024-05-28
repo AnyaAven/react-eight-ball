@@ -16,17 +16,22 @@ function EightBall({ answers }) {
   const [msg, setMsg] = useState("Think of a Question");
   const [color, setColor] = useState("black");
 
-  const randomMsgColor = sample(answers);
-  console.log(answers);
+  console.log("MESSAGE", msg);
+  console.log("COLOR", color);
 
   function handleClick(evt) {
+    console.log("HANDLE CLICK - I AM RUNNING");
+    const randomMsgColor = sample(answers);
     setMsg(randomMsgColor.msg);
     setColor(randomMsgColor.color);
   }
 
   const stylesEightBall = {
     backgroundColor: color,
-    height: "200px",
+    maxHeight: "300px",
+    height: "300px",
+    maxWidth: "300px",
+    width: "300px",
   };
 
   const stylesText = {
