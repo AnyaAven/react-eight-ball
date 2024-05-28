@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { sample } from "lodash";
+import "./EightBall.css"
 
 /**
  * EightBall Component <Button/>
